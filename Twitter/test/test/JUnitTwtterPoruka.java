@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import com.twitter.poruke.TwitterPoruka;
 
-public class Junit {
+public class JUnitTwtterPoruka {
 
 	TwitterPoruka tp;
 

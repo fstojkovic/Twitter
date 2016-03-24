@@ -27,10 +27,10 @@ public class Twitter {
 	}
 
 	/**
-	 * Konstruktor koji dobija ime korisnika i njegovu poruku
+	 * Metoda koja unosi novi objekat klase TwitterPoruka u listu
 	 * 
-	 * @param korisnik
-	 * @param poruka
+	 * @param korisnik ime korisnika
+	 * @param poruka korisnikova poruka
 	 */
 	public void unesi(String korisnik, String poruka) {
 		// Pravi se nova poruka i puni podacima.
@@ -44,7 +44,7 @@ public class Twitter {
 	/**
 	 * Metoda koja vraca niz objekata klase TwitterPoruka ciji atributi poruka u sebi sadrze prosledjeni tag
 	 * 
-	 * @param maxBroj
+	 * @param maxBroj kapacitet niza
 	 * @param tag
 	 * @return niz objekata klase TwitterPoruka 
 	 */
