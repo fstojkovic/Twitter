@@ -4,13 +4,34 @@ package com.twitter;
 import java.util.LinkedList;
 import com.twitter.poruke.TwitterPoruka;
 
+/**
+ * Ova klasa implementira listu objekata klase TwitterPoruke 
+ * 
+ * @author Filip Stojkovic
+ *
+ */
 public class Twitter {
+	
+	/**
+	 * Inicijalizacija liste poruke koja predstavlja listu objekata klase TwitterPoruka
+	 */
 	private LinkedList<TwitterPoruka> poruke = new LinkedList<TwitterPoruka>();
 
+	/**
+	 * Metoda koja vraca listu objekata klase TwitterPoruka
+	 * 
+	 * @return listu poruke
+	 */
 	public LinkedList<TwitterPoruka> vratiSvePoruke() {
 		return poruke;
 	}
 
+	/**
+	 * Konstruktor koji dobija ime korisnika i njegovu poruku
+	 * 
+	 * @param korisnik
+	 * @param poruka
+	 */
 	public void unesi(String korisnik, String poruka) {
 		// Pravi se nova poruka i puni podacima.
 		TwitterPoruka tp = new TwitterPoruka();
@@ -20,6 +41,13 @@ public class Twitter {
 		poruke.addLast(tp);
 	}
 
+	/**
+	 * Metoda koja vraca niz objekata klase TwitterPoruka ciji atributi poruka u sebi sadrze prosledjeni tag
+	 * 
+	 * @param maxBroj
+	 * @param tag
+	 * @return niz objekata klase TwitterPoruka 
+	 */
 	public TwitterPoruka[] vratiPoruke(int maxBroj, String tag) {
 		if (tag == null || tag == "")
 			throw new RuntimeException("Morate uneti tag");
