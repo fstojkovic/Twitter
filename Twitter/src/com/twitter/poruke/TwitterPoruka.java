@@ -51,7 +51,7 @@ public class TwitterPoruka {
 	 * @return poruku korisnika
 	 */
 	public String getPoruka() {
-		return "poruka";
+		return poruka;
 	}
 	/**
 	 * Metoda postavlja novu vrednost za atribut poruka
@@ -63,11 +63,11 @@ public class TwitterPoruka {
 	 *             ako je uneta poruka:
 	 *             <ul>
 	 *             <li>null</li>
-	 *             <li>duzine manje od 140 karaktera</li>
+	 *             <li>duzine vece od 140 karaktera</li>
 	 *             </ul>
 	 */
 	public void setPoruka(String poruka) {
-		if (poruka == null || this.poruka.length() > 140)
+		if (poruka == null || poruka.length() > 140)
 			throw new RuntimeException("Poruka mora biti uneta i mora imati najvise 140 znakova");
 		this.poruka = poruka;
 	}
