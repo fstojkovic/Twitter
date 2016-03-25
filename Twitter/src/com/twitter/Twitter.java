@@ -5,15 +5,16 @@ import java.util.LinkedList;
 import com.twitter.poruke.TwitterPoruka;
 
 /**
- * Ova klasa implementira listu objekata klase TwitterPoruke 
+ * Ova klasa predstavlja kolekciju poruka sa twittera
  * 
  * @author Filip Stojkovic
  *
  */
 public class Twitter {
-	
+
 	/**
-	 * Inicijalizacija liste poruke koja predstavlja listu objekata klase TwitterPoruka
+	 * Inicijalizacija liste poruke koja predstavlja listu objekata klase
+	 * TwitterPoruka
 	 */
 	private LinkedList<TwitterPoruka> poruke = new LinkedList<TwitterPoruka>();
 
@@ -29,24 +30,28 @@ public class Twitter {
 	/**
 	 * Metoda koja unosi novi objekat klase TwitterPoruka u listu
 	 * 
-	 * @param korisnik ime korisnika
-	 * @param poruka korisnikova poruka
+	 * @param korisnik
+	 *            ime korisnika
+	 * @param poruka
+	 *            korisnikova poruka
 	 */
 	public void unesi(String korisnik, String poruka) {
 		// Pravi se nova poruka i puni podacima.
 		TwitterPoruka tp = new TwitterPoruka();
-		tp.setKorisnik("korisnik");
+		tp.setKorisnik(korisnik);
 		tp.setPoruka(poruka);
 		// Poruka se unosi u listu na kraj
 		poruke.addLast(tp);
 	}
 
 	/**
-	 * Metoda koja vraca niz objekata klase TwitterPoruka ciji atributi poruka u sebi sadrze prosledjeni tag
+	 * Metoda koja vraca niz objekata klase TwitterPoruka ciji atributi poruka u
+	 * sebi sadrze prosledjeni tag
 	 * 
-	 * @param maxBroj kapacitet niza
+	 * @param maxBroj
+	 *            kapacitet niza
 	 * @param tag
-	 * @return niz objekata klase TwitterPoruka 
+	 * @return niz objekata klase TwitterPoruka
 	 */
 	public TwitterPoruka[] vratiPoruke(int maxBroj, String tag) {
 		if (tag == null || tag == "")
@@ -66,7 +71,7 @@ public class Twitter {
 		for (int i = 0; i < poruke.size(); i++)
 			if (poruke.get(i).getPoruka().indexOf(tag) != -1)
 				if (brojac < maxBroj) {
-					rezultat[brojac + 1] = poruke.get(i);
+					rezultat[brojac] = poruke.get(i);
 					brojac++;
 				} else
 					break;
