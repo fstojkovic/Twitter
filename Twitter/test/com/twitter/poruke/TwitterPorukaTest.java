@@ -69,17 +69,20 @@ public class TwitterPorukaTest {
 	@Test(expected = java.lang.RuntimeException.class)
 	public void testSetPorukaPreko140() {
 
-		tp.setPoruka(
-				"danas je lep danaaaaaaaaaaazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
-						+ "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+		String poruka="";
+		for (int i = 0; i < 50; i++) {
+			poruka+="Fon";
+			
+		}
+		tp.setPoruka(poruka);
 
 	}
 
 	@Test
 	public void testToString() {
-		tp.setKorisnik("zika");
-		tp.setPoruka("samo jako");
-		assertEquals("KORISNIK:zika PORUKA:samo jako", tp.toString());
+		tp.setKorisnik("Filip");
+		tp.setPoruka("Provera");
+		assertEquals("KORISNIK:Filip PORUKA:Provera", tp.toString());
 	}
 
 }
