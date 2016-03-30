@@ -1,4 +1,4 @@
-package test;
+package com.twitter.poruke;
 
 import static org.junit.Assert.*;
 
@@ -8,9 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.twitter.poruke.TwitterPoruka;
-
-public class JUnitTwtterPoruka {
+public class TwitterPorukaTest {
 
 	TwitterPoruka tp;
 
@@ -49,9 +47,7 @@ public class JUnitTwtterPoruka {
 	@Test(expected = java.lang.RuntimeException.class)
 	public void testSetKorisnikPrazanString() {
 
-		String ime = "";
-		tp.setKorisnik(ime);
-		assertEquals(ime, tp.getKorisnik());
+		tp.setKorisnik("");
 
 	}
 
@@ -75,7 +71,7 @@ public class JUnitTwtterPoruka {
 
 		tp.setPoruka(
 				"danas je lep danaaaaaaaaaaazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
-				+ "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+						+ "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 
 	}
 

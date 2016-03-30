@@ -51,6 +51,12 @@ public class Twitter {
 	 * @param maxBroj
 	 *            kapacitet niza
 	 * @param tag
+	 * @throws java.lang.RuntimeException
+	 *             ako je uneti tag:
+	 *             <ul>
+	 *             <li>null</li>
+	 *             <li>prazan string</li>
+	 *             </ul>
 	 * @return niz objekata klase TwitterPoruka
 	 */
 	public TwitterPoruka[] vratiPoruke(int maxBroj, String tag) {
